@@ -6,8 +6,7 @@ namespace BoxingWeights
 	{
 		public string ClassifyBoxingWeight(int weightInPounds)
 		{
-            string result = "Heavyweight";
-              
+            string result = "Heavyweight";   
             if (weightInPounds <= 105)
                result="Strawweight and "+ result;
             if (weightInPounds > 105 && weightInPounds <= 108)
