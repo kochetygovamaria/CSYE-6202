@@ -1,30 +1,34 @@
 ﻿namespace FizzBuzz
 {
-	public class FizzBuzz
-	{
-		public string RunFizzBuzz(int number)
-		{
-			string result = number.ToString();
+    public class FizzBuzz
+    {
+        public string RunFizzBuzz(int number)
+        {
+            string result = number.ToString();
 
             if (number == 0)
                 result = number.ToString();
+            else
+            {
+                if (number == 1)
+                    result = number.ToString();
 
-            if (number == 1)
-                result = number.ToString();
+                else if ((number % 3) == 0 && (number % 5) == 0)
 
-            if (number % 3 == 0)
+                    result = "FizzBuzz";
 
-                result = "Fizz";
+                else if (number % 3 == 0)
 
-            if (number % 5 == 0)
-            
-                result = "Buzz";
-           
-            if (number % 15 == 0)
+                    result = "Fizz";
 
-                result = "FizzBuzz";
+                else if (number % 5 == 0)
+
+                    result = "Buzz";
+            }
+
 
             return result;
-		}
-	}
+        }
+
+    }
 }
