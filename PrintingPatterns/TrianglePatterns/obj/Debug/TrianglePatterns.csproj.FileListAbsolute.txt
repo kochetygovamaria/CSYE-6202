@@ -1,0 +1,6 @@
+C:\Users\Maria Kochetygova\Source\Repos\CSYE-62022\PrintingPatterns\TrianglePatterns\bin\Debug\TrianglePatterns.exe.config
+C:\Users\Maria Kochetygova\Source\Repos\CSYE-62022\PrintingPatterns\TrianglePatterns\bin\Debug\TrianglePatterns.exe
+C:\Users\Maria Kochetygova\Source\Repos\CSYE-62022\PrintingPatterns\TrianglePatterns\bin\Debug\TrianglePatterns.pdb
+C:\Users\Maria Kochetygova\Source\Repos\CSYE-62022\PrintingPatterns\TrianglePatterns\obj\Debug\TrianglePatterns.csprojResolveAssemblyReference.cache
+C:\Users\Maria Kochetygova\Source\Repos\CSYE-62022\PrintingPatterns\TrianglePatterns\obj\Debug\TrianglePatterns.exe
+C:\Users\Maria Kochetygova\Source\Repos\CSYE-62022\PrintingPatterns\TrianglePatterns\obj\Debug\TrianglePatterns.pdb
