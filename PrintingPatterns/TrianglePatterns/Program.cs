@@ -49,15 +49,21 @@ namespace TrianglePatterns
 
         static void DisplayPatternC()
         {
-            for (int r = COUNTER; r > 0; r--)
-            {for (int c = 0; c < r; c++)
-                    Console.Write(STAR);
+            for (int r = 10; r >= 1; r--)
+            {
+                for (int c = 1; c <= 10 - r; c++)
+                {
+                    Console.Write(" ");
+                }
+                for (int k = 1; k <= r; k++)
+                {
+                    Console.Write("*");
+                }
                 Console.WriteLine();
 
-
             }
-
         }
+
         static void DisplayPatternD()
         {
 
