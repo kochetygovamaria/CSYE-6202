@@ -4,6 +4,10 @@ namespace TrianglePatterns
 {
     class Program
     {
+        const string STAR = "*";
+        const string SPACE = " ";
+        const int COUNTER = 10;
+
         static void Main(string[] args)
         {
             DisplayPatternA();
@@ -16,62 +20,64 @@ namespace TrianglePatterns
 
         static void DisplayPatternA()
         {
-            for (int i = 1; i <= 11; i++)
+            for (int r = 0; r < COUNTER; r++)
             {
-                for (int j = 1; j <= 1 * i - 1; j++)
-                {
-                    Console.Write("*");
-                }
+                for (int c = 0; c <= r; c++)
+
+                    Console.Write(STAR);
+
                 Console.WriteLine();
-                Console.ReadKey();
+
             }
+            Console.WriteLine();
         }
 
         static void DisplayPatternB()
         {
-            for (int i = 10; i >= 1; i--)
+            for (int r = 10; r >=1 ; r--)
             {
-                for (int j = 1; j <= i; j++)
+                for (int c = 1; c <= r; c++)
                 {
-                    Console.Write("*");
-                }
+                    Console.Write(STAR);
+                        }
+
                 Console.WriteLine();
-                Console.ReadKey();
             }
+            Console.WriteLine();
         }
+
 
         static void DisplayPatternC()
         {
-            for (int i = 0; i < 10; i++)
-            {
-                for (int j = 1; j <= 10; j++)
-                {
-                    if (i < j)
-                        Console.Write("*");
-                    else
-                        Console.Write(" ");
-                }
+            for (int r = COUNTER; r > 0; r--)
+            {for (int c = 0; c < r; c++)
+                    Console.Write(STAR);
                 Console.WriteLine();
-            }
-        }
 
+
+            }
+
+        }
         static void DisplayPatternD()
         {
 
-            for (int i = 10; i >= 0; i--)
+            for (int r = COUNTER; r > 0; r--)
             {
-                for (int j = 0; j < 10; j++)
-                {
-                    if (i > j)
-                        Console.Write(" ");
-                    else
-                        Console.Write("*");
-                }
-                Console.WriteLine();
-                Console.ReadLine();
+                for (int c = 0; c < r; c++)
+                    Console.Write(SPACE);
+                for (int c = 0; c < COUNTER - r; c++)
+                    Console.Write(STAR);
 
+
+
+                Console.WriteLine();
             }
+            Console.WriteLine();
+
         }
     }
 }
+        
+    
+
 
