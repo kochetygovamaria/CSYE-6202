@@ -15,21 +15,33 @@ namespace GasPump
 
 		static void Main(string[] args)
 		{
-            String r, R, m, M, p, P, d, D;
-            if ()
-            
-		
-		}
+
+            Console.WriteLine("Please enter the type");
+            String userInput = Console.ReadLine();
+
+            bool check = UserEnteredSentinelValue(userInput);
+            check = UserEnteredValidGasType(userInput);
+            Console.WriteLine("Please entre the amount");
+           userInput = Console.ReadLine();
+
+           /* int amount = 0;
+            Console.WriteLine("");
+            amount = Console.Read();
+            double totalCost = 0;
+            CalculateTotalCost(GasType.RegularGas, amount, totalCost);*/
+
+
+        }
 
 		// use this method to check and see if sentinel value is entered
 		public static bool UserEnteredSentinelValue(string userInput)
 		{
 			var result = false;
+            if (userInput.ToLower() =="q")
             {
+                result = true;
+            }
 
-                if  (string = q || Q || r || R || m || M || p || P || d || D);
-                    do { Console.WriteLine("Please enter purchased gas amount")
-            }    
 
 			return result;
 		}
@@ -40,7 +52,9 @@ namespace GasPump
 		{
 			var result = false;
 
-			// your implementation here
+            if (userInput.ToLower() == "r" || userInput.ToLower()== "m" || userInput.ToLower()== "p" || userInput.ToLower()=="d")
+                result = true;
+			
 			
 			return result;
 		}
@@ -49,9 +63,17 @@ namespace GasPump
 		// please use Double.TryParse() method 
 		public static bool UserEnteredValidAmount(string userInput)
 		{
+            string value;
+            double number;
 			var result = false;
 
-			// your implementation here
+            value = Double.PositiveInfinity.ToString();
+            if (Double.TryParse(value, out number))
+                Console.WriteLine(number);
+
+            result = true;
+
+			
 
 			return result;
 		}
@@ -62,10 +84,10 @@ namespace GasPump
 		public static GasType GasTypeMapper(char c)
 		{
 			GasType gasType = GasType.None;
+            
 
-			// your implementation here
 
-			return gasType;
+            return gasType;
 		}
 
 		public static double GasPriceMapper(GasType gasType)
@@ -79,7 +101,10 @@ namespace GasPump
 
 		public static void CalculateTotalCost(GasType gasType, int gasAmount, ref double totalCost)
 		{
-			// your implementation here 
+            
+                
+            }
+
 		}
 	}
-}
+
