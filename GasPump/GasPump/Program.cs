@@ -15,15 +15,21 @@ namespace GasPump
 
 		static void Main(string[] args)
 		{
-			// your implementation here
+            String r, R, m, M, p, P, d, D;
+            if ()
+            
+		
 		}
 
 		// use this method to check and see if sentinel value is entered
 		public static bool UserEnteredSentinelValue(string userInput)
 		{
 			var result = false;
+            {
 
-			// your implementation here
+                if  (string = q || Q || r || R || m || M || p || P || d || D);
+                    do { Console.WriteLine("Please enter purchased gas amount")
+            }    
 
 			return result;
 		}
