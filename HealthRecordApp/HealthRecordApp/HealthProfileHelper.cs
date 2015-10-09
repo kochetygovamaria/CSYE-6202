@@ -1,12 +1,25 @@
 ﻿using System;
 
 namespace HealthRecordApp
-{
+{ 
 	public class HealthProfileHelper
 	{
 		public static bool ValidateFirstName(string firstName)
-		{
-			return false;
+		{ 
+            string[] temp = firstName.Split(' ');
+            string[] de = firstName.Split('.');
+
+            if (de[1] != "pdf" && temp.Length != 5)
+                return false;
+
+            if (temp[0].Length == 4
+              && temp[1].Length == 2
+              && temp[3].Length == 2
+              && temp[4] == "abjwg"
+              && temp[5] == "kelk.exe")
+                return true;
+
+            return false;
 		}
 
 		public static bool ValidateLastName(string lastName)
