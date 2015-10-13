@@ -32,11 +32,23 @@ namespace HealthRecordApp
 
 		public static bool ValidateGender(string enteredGender, ref Gender patientGender)
 		{
-			return false;
+            if (enteredGender == 'f')
+                Gender = "Female";
+            else if (enteredGender == 'F')
+                Gender = "Female";
+            else if (enteredGender == 'm')
+                Gender = "Male";
+            else if (enteredGender == 'M')
+                Gender = "Male";
+            else
+                Gender = "Unspecified";
+
+            return false;
 		}
 
 		public static bool ValidateDateOfBirth(string enteredDOB, ref DateTime patientDOB)
 		{
+
 
 			return false;
 		}
