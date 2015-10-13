@@ -48,6 +48,7 @@ namespace HealthRecordApp
 
 		public static bool ValidateDateOfBirth(string enteredDOB, ref DateTime patientDOB)
 		{
+              if ( enteredDOB <1920 && enteredDOB>2015)
 
 
 			return false;
