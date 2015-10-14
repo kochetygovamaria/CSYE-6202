@@ -4,16 +4,19 @@ using System.Text.RegularExpressions;
 namespace HealthRecordApp
 { 
 	public class HealthProfileHelper
+
+
 	{
         public static bool ValidateFirstName(string firstName)
         {
-            if (Regex.Match(firstName, "^[A-Z][a-zA-Z]*$").Success)
+            var result = false;
+            if (firstName!=null && !firstName.Equals(""))
 
             {
-                return true;
+                result=true;
             }
 
-                    return false;
+                    return result;
                 
             
         }
@@ -30,37 +33,74 @@ namespace HealthRecordApp
             
 		}
 
-		public static bool ValidateGender(string enteredGender, ref Gender patientGender)
+       
+        public static bool ValidateGender(string enteredGender, ref Gender patientGender)
 		{
-            if (enteredGender == 'f')
-                Gender = "Female";
-            else if (enteredGender == 'F')
-                Gender = "Female";
-            else if (enteredGender == 'm')
-                Gender = "Male";
-            else if (enteredGender == 'M')
-                Gender = "Male";
-            else
-                Gender = "Unspecified";
+            var result = false;
+          /*  if (patientGender.Equals(Gender.Female))
 
-            return false;
+            {
+                result = true;
+            }
+
+            if (patientGender.Equals(Gender.Male))
+            { result = true;
+            }*/
+
+            if (enteredGender.ToLower().Equals("f"))  
+            {
+                patientGender = Gender.Female;
+                return true;
+                
+            }
+            if (enteredGender.ToLower().Equals("m"))
+            {
+                patientGender = Gender.Male;
+                return true;
+            }
+
+            return result;
 		}
 
 		public static bool ValidateDateOfBirth(string enteredDOB, ref DateTime patientDOB)
 		{
-              if ( enteredDOB <1920 && enteredDOB>2015)
+            var result = false;
+            int DOB;
+           
+           // if (int.TryParse(enteredDOB, out DOB))
+           
+            {
+                result = true;
+                patientDOB = DateTime.Parse(DOB);
+            }
+            
 
-
-			return false;
+            
+                return result;
+            
 		}
 
 		public static bool ValidateHeight(string heightInString, ref int patientHeight)
 		{
+            int height = int.Parse(heightInString);
+            
+            if(height>0 )
+            {
+                patientHeight = height;
+                return true;
+            }
+            
 			return false;
 		}
 
 		public static bool ValidateWeight(string weightInString, ref int patientWeight)
 		{
+            int weight = int.Parse(weightInString);
+            if (weight > 0)
+            {
+                patientWeight = weight;
+                return true;
+            }
 			return false;
 		}
 	}
