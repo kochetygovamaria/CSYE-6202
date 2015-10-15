@@ -20,30 +20,28 @@ namespace HealthRecordApp
         private const int UnknownValue = -1;
         private int patientWeight;
         private int patientHeight;
-
         private string firstName;
         private string lastName;
-        private DateTime dOB;
+        private DateTime dob;
         private Gender gender;
 
 
-        public static int count = 0;
 
         public HealthProfile()
         { }
 
-        public HealthProfile(string firstName, string lastName, Gender gender, DateTime dOB, int patientWeight, int patientHeight)
+        public HealthProfile(string firstName, string lastName, Gender gender, DateTime dob, int patientWeight, int patientHeight)
         {
             this.firstName = firstName;
             this.lastName = lastName;
             this.patientWeight = patientWeight;
             this.patientHeight = patientHeight;
             this.gender = gender;
-            this.dOB = dOB;
-            
-
-
+            this.dob = dob;
         }
+        
+
+        
         public string FirstName
 
         {
@@ -68,10 +66,11 @@ namespace HealthRecordApp
 
         public DateTime DOB
         {
-            get { return DOB; }
-            set { DOB = value; }
+            get { return dob; }
+            set { dob = value; }
+        
 
-        }
+    }
         public int WeightInPounds
         {
             get { return patientWeight; }
@@ -79,52 +78,69 @@ namespace HealthRecordApp
         }
         public int HeightInInches
         {
-            get { return  patientHeight; }
-    set { patientHeight = value; }
+            get { return patientHeight; }
+            set { patientHeight = value; }
 
         }
 
         public int CalculateAge()
-		{
-            DateTime today = DateTime.Today;
-            return today.Year - dOB.Year;
-                
-		}
+        {
+            int thisYear = DateTime.Today.Year;
+            int age = thisYear - DOB.Year;
+            return age;
+        
+
+    }
 
         public int CalculateMaxHeartRate()
         {
 
 
-            return (220 - CalculateAge());
+            int heartRate = 220 - CalculateAge();
+            if (heartRate > 0)
+            {
+                return heartRate;
+            }
+            else { return UnknownValue; }
 
+        
+
+
+
+
+    }
+
+        public decimal CalculateBMI()
+        {
+
+            return decimal.Round((patientWeight * 703) / (decimal)(patientWeight * patientWeight),2);
+
+
+
+        }
+
+        public void DisplayPatientProfile()
+
+        {
+            //var healthprofilehelper = new HealthProfileHelper(firstName, lastName, gender, age, height, weight);
+
+            
+            Console.WriteLine("DisPlaying Patient Profile:");
+            Console.WriteLine("===========================");
+            Console.WriteLine("First Name: " + FirstName);
+            Console.WriteLine("Last Name: " + LastName);
+            Console.WriteLine("Gender: " +Gender.ToString());
+            Console.WriteLine("Date of Birth: " +DOB.ToString());
+            Console.WriteLine("Height:" +HeightInInches);
+            Console.WriteLine("Weight:" +WeightInPounds);
+            Console.WriteLine("Age:" +CalculateAge());
+            Console.WriteLine("Max heart rate:" +CalculateMaxHeartRate());
+            Console.WriteLine("BMI:" +CalculateBMI());
+        }
            
 
 
-        }
-
-		public decimal CalculateBMI()
-		{
-            
-                return (patientWeight * 703) / (patientWeight * patientWeight);
-                    
-         
-
-		}
-
-		public void DisplayPatientProfile()
-
-		{
-            //var healthprofilehelper = new HealthProfileHelper(firstName, lastName, gender, age, height, weight);
-            Console.WriteLine("First Name:{0}", FirstName);
-            Console.WriteLine("Last Name:{0}", LastName);
-            Console.WriteLine("Gender:{0}", gender);
-            Console.WriteLine("Height:{0}",HeightInInches);
-            Console.WriteLine("Weight:{0}", WeightInPounds);
-             Console.WriteLine("Age: {0}", CalculateAge());
-            Console.WriteLine("Max heart rate: {0}", CalculateMaxHeartRate());
-            Console.WriteLine("BMI: { 0}", CalculateBMI());
-        }
- 
 		#endregion
 	}
+    
 }

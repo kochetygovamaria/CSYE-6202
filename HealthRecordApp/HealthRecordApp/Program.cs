@@ -18,7 +18,10 @@ namespace HealthRecordApp
 
                 if (check == false)
                 {
-                    break;
+                    
+                        q = true;
+                        break;
+                      
 
                 }
                 else
@@ -32,14 +35,31 @@ namespace HealthRecordApp
                 {
                     if (check == false)
                     {
+                        q = true;
                         break;
                     }
 
                     else
                     {
                         hp.LastName = lastName;
-                        Console.WriteLine("Please entter the Date Of Birth");
+                        Console.WriteLine("Please enter the Gender");
                     }
+                    String enteredGender = Console.ReadLine();
+                    Gender gd = new Gender();
+                    check = HealthProfileHelper.ValidateGender(enteredGender, ref gd);
+                    if (check == false)
+                    {
+                        q = true;
+                        break;
+
+                    }
+                    else
+                    {
+                        hp.Gender = gd;
+                        Console.WriteLine("Enter the DOB");
+
+                    }
+
 
                     String enteredDOB = Console.ReadLine();
                     DateTime dt = new DateTime();
@@ -47,35 +67,31 @@ namespace HealthRecordApp
 
                     if (check == false)
                     {
+                        q = true;
                         break;
 
                     }
                     else
                     {
-                        int DOB = int.Parse(enteredDOB);
+                        DateTime patientDOB = DateTime.Today;
+
+                        
+
+                        
                         hp.DOB = dt;
-                        Console.WriteLine("Please enter the Gender");
+                        Console.WriteLine("Please height");
                     }
 
-                    String enteredGender = Console.ReadLine();
-                    Gender gd = new Gender();
-                    check = HealthProfileHelper.ValidateGender(enteredGender, ref gd);
-                    if (check == false)
-                    {
-                        break;
 
-                    }
-                    else
-                    {
-                        hp.Gender = gd;
-                        Console.WriteLine("Enter the height");
 
-                    }
+
+                    
                     String heightInString = Console.ReadLine();
                     int pHeight = 0;
                     check = HealthProfileHelper.ValidateHeight(heightInString, ref pHeight);
                     if (check == false)
                     {
+                        q = true;
                         break;
 
                     }
@@ -88,19 +104,25 @@ namespace HealthRecordApp
                     String weightInString = Console.ReadLine();
                     int pweight = 0;
                     check = HealthProfileHelper.ValidateWeight(weightInString, ref pweight);
-                    if (check==false)
+                    if (check == false)
                     {
+                        q = true;
                         break;
                     }
                     else
                     {
                         int patientWeight = int.Parse(weightInString);
                         hp.WeightInPounds = pweight;
-                        hp.DisplayPatientProfile();
+
                     }
-            }
+                    Console.WriteLine();
+                    Console.WriteLine();
+                    hp.DisplayPatientProfile();
+                    Console.ReadLine();
+                }
             }
         }
     }
 }
+
     

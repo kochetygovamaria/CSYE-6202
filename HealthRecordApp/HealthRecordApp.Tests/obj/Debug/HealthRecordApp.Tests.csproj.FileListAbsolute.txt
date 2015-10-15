@@ -1,1 +1,9 @@
 C:\Users\Maria Kochetygova\Source\Repos\CSYE-62023\HealthRecordApp\HealthRecordApp.Tests\obj\Debug\HealthRecordApp.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Maria Kochetygova\Source\Repos\CSYE-62023\HealthRecordApp\HealthRecordApp.Tests\obj\Debug\HealthRecordApp.Tests.dll
+C:\Users\Maria Kochetygova\Source\Repos\CSYE-62023\HealthRecordApp\HealthRecordApp.Tests\obj\Debug\HealthRecordApp.Tests.pdb
+C:\Users\Maria Kochetygova\Source\Repos\CSYE-62023\HealthRecordApp\HealthRecordApp.Tests\bin\Debug\HealthRecordApp.Tests.dll
+C:\Users\Maria Kochetygova\Source\Repos\CSYE-62023\HealthRecordApp\HealthRecordApp.Tests\bin\Debug\HealthRecordApp.Tests.pdb
+C:\Users\Maria Kochetygova\Source\Repos\CSYE-62023\HealthRecordApp\HealthRecordApp.Tests\bin\Debug\HealthRecordApp.exe
+C:\Users\Maria Kochetygova\Source\Repos\CSYE-62023\HealthRecordApp\HealthRecordApp.Tests\bin\Debug\nunit.framework.dll
+C:\Users\Maria Kochetygova\Source\Repos\CSYE-62023\HealthRecordApp\HealthRecordApp.Tests\bin\Debug\HealthRecordApp.pdb
+C:\Users\Maria Kochetygova\Source\Repos\CSYE-62023\HealthRecordApp\HealthRecordApp.Tests\bin\Debug\nunit.framework.xml

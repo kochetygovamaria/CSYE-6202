@@ -3,4 +3,3 @@ C:\Users\Maria Kochetygova\Source\Repos\CSYE-62023\HealthRecordApp\HealthRecordA
 C:\Users\Maria Kochetygova\Source\Repos\CSYE-62023\HealthRecordApp\HealthRecordApp\bin\Debug\HealthRecordApp.pdb
 C:\Users\Maria Kochetygova\Source\Repos\CSYE-62023\HealthRecordApp\HealthRecordApp\obj\Debug\HealthRecordApp.exe
 C:\Users\Maria Kochetygova\Source\Repos\CSYE-62023\HealthRecordApp\HealthRecordApp\obj\Debug\HealthRecordApp.pdb
-C:\Users\Maria Kochetygova\Source\Repos\CSYE-62023\HealthRecordApp\HealthRecordApp\obj\Debug\HealthRecordApp.csprojResolveAssemblyReference.cache
