@@ -9,23 +9,42 @@ namespace HealthRecordApp
 	{
         public static bool ValidateFirstName(string firstName)
         {
-            var result = false;
-            if (firstName!=null && !firstName.Equals(""))
 
             {
-                result= true;
-            }
+           if (firstName == null)
+           return false;
 
-            return result;
+           string nam=firstName.Trim();
+
+          if (nam.Equals(""))
+
+                    return false;
+           else
+
+                return true;
+            }
 
 
         }
 
 		public static bool ValidateLastName(string lastName)
 		{
+            {
+                if (lastName == null)
+               return false;
 
-            var result = false;
-            if (lastName!=null && !lastName.Equals(""))
+                string ln = lastName.Trim();
+                if (ln.Equals(""))
+                    return false;
+
+                else
+                return true;
+            }
+
+
+
+            /* var result = false;
+            if (lastName!=null && !lastName.Equals(" "))
                
             
             {
@@ -33,7 +52,7 @@ namespace HealthRecordApp
             }
 
 
-            return result;
+            return result;*/
 
         }
 
@@ -133,7 +152,7 @@ namespace HealthRecordApp
 
                 for (int i = 0; i < heightInString.ToCharArray().Length; i++)
                 {
-                    if (heightInString.ToCharArray()[i] > '9' || heightInString.ToCharArray()[i] < '0')
+                    if (heightInString.ToCharArray()[i] > '8' || heightInString.ToCharArray()[i] < '0')
                     {
                         return false;
                     }
@@ -148,8 +167,12 @@ namespace HealthRecordApp
 
 		public static bool ValidateWeight(string weightInString, ref int patientWeight)
 		{
-            try { Convert.ToInt32(weightInString); }
-            catch (Exception) { return false; }
+            try { Convert.ToInt32(weightInString);
+            }
+
+            catch (Exception e)
+            { return false;
+            }
             int weight = Convert.ToInt32(weightInString);
             if (weight > 0)
             {

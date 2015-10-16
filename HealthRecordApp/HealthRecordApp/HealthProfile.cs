@@ -112,12 +112,15 @@ namespace HealthRecordApp
 
         public decimal CalculateBMI()
         {
+            decimal bmi = 0;
+            bmi=Math.Round((WeightInPounds * 703.00m) / (HeightInInches * HeightInInches), 2);
+            return bmi;
+           // return Math.Round(bmi, 2);
+           // return decimal.Round(((decimal)(patientWeight * 703)) /( (decimal)(patientWeight * patientWeight)), 2);
+            
 
-            return decimal.Round((patientWeight * 703) / (decimal)(patientWeight * patientWeight),2);
 
-
-
-        }
+    }
 
         public void DisplayPatientProfile()
 
@@ -131,8 +134,8 @@ namespace HealthRecordApp
             Console.WriteLine("Last Name: " + LastName);
             Console.WriteLine("Gender: " +Gender.ToString());
             Console.WriteLine("Date of Birth: " +DOB.ToString());
-            Console.WriteLine("Height:" +HeightInInches);
-            Console.WriteLine("Weight:" +WeightInPounds);
+            Console.WriteLine("Height:" +HeightInInches+ "inches");
+            Console.WriteLine("Weight:" +WeightInPounds + "pounds");
             Console.WriteLine("Age:" +CalculateAge());
             Console.WriteLine("Max heart rate:" +CalculateMaxHeartRate());
             Console.WriteLine("BMI:" +CalculateBMI());

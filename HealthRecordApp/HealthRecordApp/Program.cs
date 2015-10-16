@@ -10,7 +10,7 @@ namespace HealthRecordApp
         {
             Boolean q = false;
 
-            Console.WriteLine("Please enter the firstName");
+            Console.WriteLine("Please enter patient's firstName");
             while (!q)
             {
                 String firstName = Console.ReadLine();
@@ -27,7 +27,7 @@ namespace HealthRecordApp
                 else
                 {
                     hp.FirstName = firstName;
-                    Console.WriteLine("Please enter your LastName");
+                    Console.WriteLine("Please enter patient's LastName");
                 }
 
                 String lastName = Console.ReadLine();
@@ -42,7 +42,7 @@ namespace HealthRecordApp
                     else
                     {
                         hp.LastName = lastName;
-                        Console.WriteLine("Please enter the Gender");
+                        Console.WriteLine("Please enter patient's Gender");
                     }
                     String enteredGender = Console.ReadLine();
                     Gender gd = new Gender();
@@ -56,7 +56,7 @@ namespace HealthRecordApp
                     else
                     {
                         hp.Gender = gd;
-                        Console.WriteLine("Enter the DOB");
+                        Console.WriteLine("Enter patients Date of Birth");
 
                     }
 
@@ -79,7 +79,7 @@ namespace HealthRecordApp
 
                         
                         hp.DOB = dt;
-                        Console.WriteLine("Please height");
+                        Console.WriteLine("Please enter patient's height");
                     }
 
 
@@ -99,7 +99,7 @@ namespace HealthRecordApp
                     {
                         int patientHeight = int.Parse(heightInString);
                         hp.HeightInInches = pHeight;
-                        Console.WriteLine("Please Enter weight");
+                        Console.WriteLine("Please enter patient's weight");
                     }
                     String weightInString = Console.ReadLine();
                     int pweight = 0;
