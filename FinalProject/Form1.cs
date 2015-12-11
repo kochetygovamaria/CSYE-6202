@@ -19,16 +19,15 @@ namespace FinalProject
         List<Person> persons = new List<Person>();
         List<Appoiment> appoimnet = new List<Appoiment>();
         List<Doctor> doctor = new List<Doctor>();
-        int count = 3;
         private void Form1_Load(object sender, EventArgs e)
         {
             Admin admin = new Admin();
-            admin.addUser("John", "Brown", "ad", "ad", "admin");
+            admin.addAdmin("John", "Brown", "ad", "ad", "admin");
 
             persons.Add(admin);
 
             HospitalAdminPerson hadmin = new HospitalAdminPerson();
-            hadmin.addUser("Jakob", "Hager", "a", "a", "hadmin");
+            hadmin.addHospitalAdminPerson("Jakob", "Hager", "a", "a", "hadmin");
             persons.Add(hadmin);
 
 
@@ -39,14 +38,9 @@ namespace FinalProject
         {
             string user = txtUserName.Text;
             string password = textPassword.Text;
-            bool y = false;
-
 
             foreach (Person person in persons)
             {
-
-
-
                 if (person is Admin)
                 {
                     Admin ad = (Admin)person;

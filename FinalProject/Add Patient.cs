@@ -52,7 +52,6 @@ namespace FinalProject
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-
             if (textNameF.Text.Trim() != "" && textLastName.Text.Trim() != "" && textID.Text.Trim() != ""
             && textIncuranceName.Text.Trim() != "" && textNumberInsurance.Text.Trim() != "" && textDOB.Text.Trim() != "")
             {
@@ -64,12 +63,8 @@ namespace FinalProject
                 ListOfPatients.patients.Add(patient);
                 ClassHelper.addPatientToXML(new List<Patient>(ListOfPatients.patients));
 
-
                 this.Close();
             }
-
-
-
         }
     }
 }

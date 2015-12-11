@@ -9,7 +9,6 @@ namespace FinalProject
     public class Patient : Person
     {
         public String PatientId { get; set; }
-
         public String HealthProvider { get; set; }
         public String InsuranceNumber { get; set; }
         public DateTime DateOfBirth { get; set; }
@@ -17,6 +16,7 @@ namespace FinalProject
 
         public Patient()
         { }
+
         // public HealthRecord Healthrecord { get; set; }
         public void addPatient(string firstname, string lastname, string patientId, string healthProvider, string healthInsuaranceN, DateTime dateOfBirth)
         {
@@ -27,24 +27,10 @@ namespace FinalProject
             InsuranceNumber = healthInsuaranceN;
             DateOfBirth = dateOfBirth;
         }
+
         public override string ToString()
         {
             return String.Format("{0}, {1}", LastName, FirstName);
         }
-
-        public static bool UserEnteredSentinelValue(string userInput)
-        {
-            var result = false;
-            if (userInput.ToLower().Equals(" "))
-            {
-                result = true;
-            }
-
-
-            return result;
-        }
-
-
-
     }
 }

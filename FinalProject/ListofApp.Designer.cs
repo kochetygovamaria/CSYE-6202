@@ -44,7 +44,6 @@ namespace FinalProject
             this.button1 = new System.Windows.Forms.Button();
             this.AppID = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.AppoimentGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -149,7 +148,6 @@ namespace FinalProject
             this.DoctorCBX.Name = "DoctorCBX";
             this.DoctorCBX.Size = new System.Drawing.Size(217, 33);
             this.DoctorCBX.TabIndex = 20;
-            this.DoctorCBX.SelectedIndexChanged += new System.EventHandler(this.DoctorCBX_SelectedIndexChanged);
             // 
             // button1
             // 
@@ -168,22 +166,11 @@ namespace FinalProject
             this.AppID.Size = new System.Drawing.Size(218, 31);
             this.AppID.TabIndex = 29;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(113, 99);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 25);
-            this.label5.TabIndex = 30;
-            this.label5.Text = "ID";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
             // ListofApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1228, 1045);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.AppID);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker);
@@ -222,6 +209,5 @@ namespace FinalProject
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox AppID;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Label label5;
     }
 }

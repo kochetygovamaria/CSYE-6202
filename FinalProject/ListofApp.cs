@@ -34,7 +34,7 @@ namespace FinalProject
 
         private void List_of_App_Load(object sender, EventArgs e)
         {
-           patients= ClassHelper.LoadPatients(); 
+           patients= ClassHelper.LoadPatients("patients.xml"); 
            doctors=ClassHelper.LoadDoctors();
             LoadDataGrid();
 
@@ -136,16 +136,6 @@ namespace FinalProject
         {
             appoimnets = ClassHelper.LoadAppoimnet();
             AppoimentGridView.DataSource = appoimnets;
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DoctorCBX_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
     }

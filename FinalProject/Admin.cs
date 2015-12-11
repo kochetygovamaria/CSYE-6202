@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FinalProject
 {
-    class Admin : Person
+    public class Admin : Person
     {
         public String UserName
         {
@@ -22,15 +22,13 @@ namespace FinalProject
             get; set;
         }
 
-        public void addUser(string name, string last, string userName, string password, string Accesspoint)
+        public void addAdmin(string name, string last, string userName, string password, string Accesspoint)
         {
             FirstName = name;
             LastName = last;
             UserName = userName;
             Password = password;
             this.AccessPoint = Accesspoint;
-
         }
-
     }
 }

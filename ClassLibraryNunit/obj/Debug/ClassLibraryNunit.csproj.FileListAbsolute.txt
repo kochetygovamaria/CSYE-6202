@@ -7,12 +7,12 @@ C:\Users\Maria Kochetygova\Source\Repos\CSYE-6202\FinalProject\ClassLibraryNunit
 C:\Users\Maria Kochetygova\Source\Repos\CSYE-6202\FinalProject\ClassLibraryNunit\obj\Debug\ClassLibraryNunit.csprojResolveAssemblyReference.cache
 C:\Users\Maria Kochetygova\Source\Repos\CSYE-6202\FinalProject\ClassLibraryNunit\obj\Debug\ClassLibraryNunit.dll
 C:\Users\Maria Kochetygova\Source\Repos\CSYE-6202\FinalProject\ClassLibraryNunit\obj\Debug\ClassLibraryNunit.pdb
+C:\Users\Maria Kochetygova\Source\Repos\CSYE-62024\ClassLibraryNunit\obj\Debug\ClassLibraryNunit.csprojResolveAssemblyReference.cache
 C:\Users\Maria Kochetygova\Source\Repos\CSYE-62024\ClassLibraryNunit\bin\Debug\ClassLibraryNunit.dll
 C:\Users\Maria Kochetygova\Source\Repos\CSYE-62024\ClassLibraryNunit\bin\Debug\ClassLibraryNunit.pdb
 C:\Users\Maria Kochetygova\Source\Repos\CSYE-62024\ClassLibraryNunit\bin\Debug\FinalProject.exe
 C:\Users\Maria Kochetygova\Source\Repos\CSYE-62024\ClassLibraryNunit\bin\Debug\nunit.framework.dll
 C:\Users\Maria Kochetygova\Source\Repos\CSYE-62024\ClassLibraryNunit\bin\Debug\FinalProject.pdb
 C:\Users\Maria Kochetygova\Source\Repos\CSYE-62024\ClassLibraryNunit\bin\Debug\nunit.framework.xml
-C:\Users\Maria Kochetygova\Source\Repos\CSYE-62024\ClassLibraryNunit\obj\Debug\ClassLibraryNunit.csprojResolveAssemblyReference.cache
 C:\Users\Maria Kochetygova\Source\Repos\CSYE-62024\ClassLibraryNunit\obj\Debug\ClassLibraryNunit.dll
 C:\Users\Maria Kochetygova\Source\Repos\CSYE-62024\ClassLibraryNunit\obj\Debug\ClassLibraryNunit.pdb

@@ -22,7 +22,6 @@ namespace FinalProject
             xmlOut.WriteStartDocument();
             xmlOut.WriteStartElement("doctors");
 
-
             foreach (Doctor d in doctors)
             {
                 xmlOut.WriteStartElement("doctor");
@@ -38,12 +37,6 @@ namespace FinalProject
 
             xmlOut.Close();
         }
-
-
-
-
-
-
 
         public static void addPatientToXML(List<Patient> patients)
         {
@@ -74,11 +67,20 @@ namespace FinalProject
             xmlOut.Close();
         }
 
-        public static BindingList<Patient> LoadPatients()
+        // returns null if file not found
+        public static BindingList<Patient> LoadPatients(string path)
         {
             BindingList<Patient> patients = new BindingList<Patient>();
             XmlDocument doc = new XmlDocument();
-            doc.Load("patients.xml");
+
+            try {
+                doc.Load(path);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+            
             foreach (XmlNode node in doc.DocumentElement.ChildNodes)
             {
                 string patientId = node.ChildNodes[0].InnerText;
@@ -106,11 +108,10 @@ namespace FinalProject
             foreach (XmlNode node in doc.DocumentElement.ChildNodes)
             {
                 string Id = node.ChildNodes[0].InnerText;
-               
+
                 string firstname = node.ChildNodes[1].InnerText;
                 string lastname = node.ChildNodes[2].InnerText;
                 string title = node.ChildNodes[3].InnerText;
-
                 Doctor d = new Doctor();
 
                 d.addDoctor(firstname, lastname, Id, title);
@@ -123,7 +124,7 @@ namespace FinalProject
 
         public static Patient getPatientByID(string id)
         {
-            BindingList<Patient> patients = LoadPatients();
+            BindingList<Patient> patients = LoadPatients("patients.xml");
             Patient patient = null;
             //Patient patient = patients.FirstOrDefault(a => a.PatientId.Equals(id));
             foreach (Patient item in patients)
@@ -135,17 +136,15 @@ namespace FinalProject
                 }
             }
             return patient;
-
         }
 
-        public static Doctor getDoctorBYID(string id)
+        public static Doctor getDoctorByID(string id)
         {
             BindingList<Doctor> doctors = LoadDoctors();
             Doctor doctor = null;
             foreach (Doctor d in doctors)
             {
                 if (d.ID.Equals(id))
-
                 {
                     doctor = d;
                     break;
@@ -168,20 +167,16 @@ namespace FinalProject
                 string day = node.ChildNodes[3].InnerText;
                 string ReasonID = node.ChildNodes[4].InnerText;
 
-
                 Appoiment appointment = new Appoiment();
                 appointment.Id = Id;
                 appointment.patient = getPatientByID(patientid);
-                appointment.doctor = getDoctorBYID(DoctorID);
+                appointment.doctor = getDoctorByID(DoctorID);
                 appointment.day = Convert.ToDateTime(day);
                 appointment.reason = ReasonID;
-
 
                 appoimnets.Add(appointment);
             }
             return appoimnets;
-
-
         }
         public static void addScheduleOfAppToXML(List<Appoiment> appoimnets)
         {
@@ -190,10 +185,8 @@ namespace FinalProject
             settings.IndentChars = ("    ");
 
             XmlWriter xmlOut = XmlWriter.Create("appoiments.xml");
-
             xmlOut.WriteStartDocument();
             xmlOut.WriteStartElement("appoiments");
-
 
             foreach (Appoiment appoimnet in appoimnets)
             {
@@ -204,7 +197,6 @@ namespace FinalProject
                 xmlOut.WriteElementString("Day", appoimnet.day.ToShortDateString());
                 xmlOut.WriteElementString("ReasonID", appoimnet.reason);
 
-
                 xmlOut.WriteEndElement();
             }
 
@@ -212,7 +204,6 @@ namespace FinalProject
 
             xmlOut.Close();
         }
-
 
         public static void deleteAppoiment(BindingList<Appoiment> appoimnets, int index)
         {
@@ -268,9 +259,6 @@ namespace FinalProject
             XmlNode xmlnode = doc.DocumentElement.ChildNodes.Item(seletedIndex);
             xmlnode.ParentNode.RemoveChild(xmlnode);
             doc.Save("appoiments.xml");
-
-
-
         }
 
         public static void deleteDoctor(BindingList<Doctor> doctors, int index)
@@ -297,9 +285,6 @@ namespace FinalProject
             XmlNode xmlnode = doc.DocumentElement.ChildNodes.Item(seletedIndex);
             xmlnode.ParentNode.RemoveChild(xmlnode);
             doc.Save("doctors.xml");
-
-
-
         }
     }
 }

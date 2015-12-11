@@ -18,6 +18,7 @@ namespace FinalProject
         }
         public Person()
         { }
+
         public Person(string firstName, string lastname)
         {
 

@@ -21,8 +21,7 @@ namespace FinalProject
 
         private void DoctorList_Load(object sender, EventArgs e)
         {
-            doctors = ClassHelper.LoadDoctors();
-            dataGridViewDoctor.DataSource = doctors;
+            LoadDataGrid();
         }
 
         private void AddDoctor_Click(object sender, EventArgs e)
@@ -48,7 +47,6 @@ namespace FinalProject
                 textID.Text = row.Cells[2].Value.ToString();
                 textNameF.Text = row.Cells[0].Value.ToString();
                 textLastName.Text = row.Cells[1].Value.ToString();
-
                 textTitle.Text = row.Cells[3].Value.ToString();
 
 
@@ -64,7 +62,7 @@ namespace FinalProject
             {
                 foreach (Doctor doc in doctors)
                 {
-                    if (doc.ID == row.Cells[2].Value.ToString())
+                    if (doc.ID == row.Cells[0].Value.ToString())
                     {
                         index = doctors.IndexOf(doc);
                         doctor = doc;
@@ -97,7 +95,7 @@ namespace FinalProject
             {
                 foreach (Doctor doc in doctors)
                 {
-                    if (doc.ID == row.Cells[2].Value.ToString())
+                    if (doc.ID == row.Cells[0].Value.ToString())
                     {
                         index = doctors.IndexOf(doc);
                         doctor = doc;
@@ -105,9 +103,7 @@ namespace FinalProject
 
                     }
                 }
-
             }
-
 
             UpdateDoctor upf = new UpdateDoctor(doctor, index);
             upf.DoctorList = this;

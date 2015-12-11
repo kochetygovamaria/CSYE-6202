@@ -26,7 +26,7 @@ namespace FinalProject
 
         private void UpdateApp_Load(object sender, EventArgs e)
         {
-            patients = ClassHelper.LoadPatients();
+            patients = ClassHelper.LoadPatients("patients.xml");
             doctors = ClassHelper.LoadDoctors();
             appoimnets = ClassHelper.LoadAppoimnet();
             AppID.Text = appoimnets[index].Id;
@@ -52,7 +52,7 @@ namespace FinalProject
                 {
                    // appoimnets[index].Id = AppID.Text;
                     //appoimnets[index].patient.ToString().Equals(PatientCBX);
-                    appoimnets[index].doctor.ToString().Equals( DoctorCBX.Text);
+                   // appoimnets[index].doctor.ToString().Equals( DoctorCBX.Text);
                     appoimnets[index].day = time;
                     appoimnets[index].reason = ReasonCBX.Text;
 

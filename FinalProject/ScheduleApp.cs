@@ -32,7 +32,7 @@ namespace FinalProject
         private void ScheduleApp_Load(object sender, EventArgs e)
         {
 
-            patients = ClassHelper.LoadPatients();
+            patients = ClassHelper.LoadPatients("patients.xml");
             doctors = ClassHelper.LoadDoctors();
             appoimnets = ClassHelper.LoadAppoimnet();
             PatientCBX.DataSource = patients;

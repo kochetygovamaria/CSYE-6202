@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FinalProject
 {
-   public  class Doctor : Person
+   public class Doctor : Person
     {
         public String ID { get; set; }
         public String Title { get; set; }

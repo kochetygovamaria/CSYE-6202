@@ -206,8 +206,5 @@ namespace FinalProject
         private System.Windows.Forms.Label healthProvider;
         private System.Windows.Forms.Button buttonResert;
         private System.Windows.Forms.Button buttonAdd;
-        private List<Person> persons;
-
-       
     }
 }

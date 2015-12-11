@@ -12,7 +12,6 @@ namespace FinalProject
 {
     public partial class HospitalAdmin : Form
     {
-        internal DoctorList Doctor;
         private BindingList<Doctor> doctor;
         public HospitalAdmin(List<Person> persons, List<Doctor> doctor)
         {

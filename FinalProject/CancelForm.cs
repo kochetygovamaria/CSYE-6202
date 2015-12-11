@@ -27,7 +27,7 @@ namespace FinalProject
         private void CancelForm_Load(object sender, EventArgs e)
         {
 
-            patients = ClassHelper.LoadPatients();
+            patients = ClassHelper.LoadPatients("patients.xml");
             doctors = ClassHelper.LoadDoctors();
             appoimnets = ClassHelper.LoadAppoimnet();
             AppID.Text = appoimnets[index].Id;

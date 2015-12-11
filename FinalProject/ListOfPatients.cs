@@ -29,7 +29,7 @@ namespace FinalProject
 
         private void ListOfPatients_Load(object sender, EventArgs e)
         {
-            patients = ClassHelper.LoadPatients();
+            patients = ClassHelper.LoadPatients("patients.xml");
           
             dataGridView1.DataSource = patients;
 
