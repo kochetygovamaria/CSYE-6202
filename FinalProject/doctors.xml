@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<doctors>
+ 
+   <doctor>
+    <firstname>John</firstname>
+    <lastname>Brown</lastname>
+    <id>JB123</id>
+    <title>Physician</title>
+  </doctor>
+  
+  <doctor>
+    <firstname>Ann</firstname>
+    <lastname>Johnson</lastname>
+    <id>AJ133</id>
+    <title>Gynecologist</title>
+  </doctor>
+ 
+  <doctor>
+    <firstname>Bob</firstname>
+    <lastname>Black</lastname>
+    <id>BB156</id>
+    <title>Cardiologist</title>
+  </doctor>
+
+  <doctor>
+    <firstname>Christopher</firstname>
+    <lastname>Li</lastname>
+    <id>CL243</id>
+    <title>Dentist</title>
+  </doctor>
+
+  <doctor>
+    <firstname>Bruce</firstname>
+    <lastname>Wong</lastname>
+    <id>BW643</id>
+    <title>Dermatologist</title>
+  </doctor>
+
+  <doctor>
+    <firstname>Angelica</firstname>
+    <lastname>Mitchel</lastname>
+    <id>AM443</id>
+    <title>Endocrinologist</title>
+  </doctor>
+
+  <doctor>
+    <firstname>Wei</firstname>
+    <lastname>Chen</lastname>
+    <id>WC783</id>
+    <title>Immunologist</title>
+  </doctor>
+</doctors>
+
+
+
+
+
+
+

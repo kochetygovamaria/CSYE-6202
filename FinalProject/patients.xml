@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+
+<patients>
+    <patient>
+      <id>1</id>
+      <firstname>Maria</firstname>
+      <lastname>Kochetygova</lastname>
+      <healthProvider>Blue</healthProvider>
+      <healthInsuaranceN>3221</healthInsuaranceN>
+      <dateOfBirth>12/12/2000</dateOfBirth>
+        
+    </patient>
+    <patient>
+      <id>2</id>
+      <firstname>Jakob</firstname>
+      <lastname>Hager</lastname>
+      <healthProvider>Blue</healthProvider>
+      <healthInsuaranceN>32213</healthInsuaranceN>
+      <dateOfBirth>11/12/2000</dateOfBirth>
+    </patient>
+  
+</patients>
