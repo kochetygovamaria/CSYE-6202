@@ -65,6 +65,7 @@
             // 
             // textTitle
             // 
+            this.textTitle.Enabled = false;
             this.textTitle.Location = new System.Drawing.Point(427, 320);
             this.textTitle.Name = "textTitle";
             this.textTitle.Size = new System.Drawing.Size(209, 31);
@@ -81,6 +82,7 @@
             // 
             // textID
             // 
+            this.textID.Enabled = false;
             this.textID.Location = new System.Drawing.Point(427, 260);
             this.textID.Name = "textID";
             this.textID.Size = new System.Drawing.Size(208, 31);
@@ -88,6 +90,7 @@
             // 
             // textLastName
             // 
+            this.textLastName.Enabled = false;
             this.textLastName.Location = new System.Drawing.Point(427, 188);
             this.textLastName.Name = "textLastName";
             this.textLastName.Size = new System.Drawing.Size(209, 31);
@@ -95,6 +98,7 @@
             // 
             // textNameF
             // 
+            this.textNameF.Enabled = false;
             this.textNameF.Location = new System.Drawing.Point(427, 114);
             this.textNameF.Name = "textNameF";
             this.textNameF.Size = new System.Drawing.Size(214, 31);

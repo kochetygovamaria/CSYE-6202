@@ -18,6 +18,7 @@ namespace FinalProject
        // private List<Pattient> patient;
         private BindingList<Doctor> doctors;
         private BindingList<Patient> patients;
+        private BindingList<Reason> reasons;
 
 
         public ScheduleApp()
@@ -25,7 +26,8 @@ namespace FinalProject
             InitializeComponent();
             this.appoimnets = new BindingList<Appoiment>();
           this.doctors = new BindingList<Doctor>();
-          this.patients = new BindingList<Patient>(); 
+          this.patients = new BindingList<Patient>();
+            this.reasons = new BindingList<Reason>();
 
         }
 
@@ -35,8 +37,10 @@ namespace FinalProject
             patients = ClassHelper.LoadPatients("patients.xml");
             doctors = ClassHelper.LoadDoctors();
             appoimnets = ClassHelper.LoadAppoimnet();
+            reasons = ClassHelper.LoadReason();
             PatientCBX.DataSource = patients;
             DoctorCBX.DataSource = doctors;
+            ReasonCBX.DataSource = reasons;
         }
     
 
@@ -61,7 +65,7 @@ namespace FinalProject
                 DateTime time;
                 
                 time=dateTimePicker1.Value;
-                appoiment.addAppointment(AppID.Text, time, ReasonCBX.SelectedItem.ToString(), (Patient)PatientCBX.SelectedItem, (Doctor)DoctorCBX.SelectedItem);
+                appoiment.addAppointment(AppID.Text, time, (Reason)ReasonCBX.SelectedItem, (Patient)PatientCBX.SelectedItem, (Doctor)DoctorCBX.SelectedItem);
                 //BindingList<Appoiment> appoiments = ClassHelper.LoadAppoimnet();
                 appoimnets.Add(appoiment);
                 ClassHelper.addScheduleOfAppToXML(new List<Appoiment>(appoimnets));

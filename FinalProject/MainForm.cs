@@ -11,19 +11,19 @@ using System.Windows.Forms;
 
 namespace FinalProject
 {
-    public partial class Form2 : Form
+    public partial class MainForm : Form
     {
         internal ListOfPatients ListOfPatients;
         private BindingList<Appoiment> Appoimnet;
         private BindingList<Person> Persons;
         private BindingList<Doctor> doctor;
 
-        public Form2()
+        public MainForm()
         {
             InitializeComponent();
         }
 
-        internal Form2(List<Person> persons, List<Appoiment> appoimnet,List<Doctor>doctor)
+        internal MainForm(List<Person> persons, List<Appoiment> appoimnet,List<Doctor>doctor)
         {
             InitializeComponent();
             this.Persons = new BindingList<Person>(persons);
@@ -54,6 +54,15 @@ namespace FinalProject
 
         }
 
-      
+        private void logOutBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm stUF = new LoginForm();
+            stUF.Show();
+        }
+        private void Form2_FormClosing(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

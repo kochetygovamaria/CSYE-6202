@@ -67,6 +67,35 @@ namespace FinalProject
             xmlOut.Close();
         }
 
+
+
+
+        public static void addReason(List<Reason> reasons)
+        {
+            XmlWriterSettings settings = new XmlWriterSettings();
+            settings.Indent = true;
+            settings.IndentChars = ("    ");
+
+            XmlWriter xmlOut = XmlWriter.Create("reasons.xml");
+
+            xmlOut.WriteStartDocument();
+            xmlOut.WriteStartElement("reasons");
+
+
+            foreach (Reason r in reasons)
+            {
+                xmlOut.WriteStartElement("reason");
+                xmlOut.WriteElementString("reasonName", r.reasonName);
+                xmlOut.WriteElementString("reasonPrice", r.reasonPrice.ToString());
+              
+                xmlOut.WriteEndElement();
+            }
+
+            xmlOut.WriteEndElement();
+
+            xmlOut.Close();
+        }
+
         // returns null if file not found
         public static BindingList<Patient> LoadPatients(string path)
         {
@@ -153,6 +182,49 @@ namespace FinalProject
             return doctor;
 
         }
+
+        public static BindingList<Reason> LoadReason()
+        {
+            BindingList<Reason> reasons = new BindingList<Reason>();
+            XmlDocument doc = new XmlDocument();
+            doc.Load("reasons.xml");
+            foreach (XmlNode node in doc.DocumentElement.ChildNodes)
+            {
+               
+                
+                string reasonName = node.ChildNodes[0].InnerText;
+                string  reasonPrice = node.ChildNodes[1].InnerText;
+                Reason reason = new Reason();
+                double price = Convert.ToDouble(reasonPrice);
+                reason.addReason(reasonName, price);
+
+                reasons.Add(reason);
+                
+            }
+            return reasons;
+
+        }
+
+       
+        public static Reason getReason(string reasonName)
+        {
+            BindingList<Reason> reasons = LoadReason();
+           Reason reason = null;
+            foreach (Reason r in reasons)
+            {
+                if (r.reasonName.Equals(reasonName))
+                  
+                {
+                    reason=r;
+                    break;
+                }
+            }
+            return reason;
+
+        }
+
+
+
         public static BindingList<Appoiment> LoadAppoimnet()
         {
             BindingList<Appoiment> appoimnets = new BindingList<Appoiment>();
@@ -172,7 +244,7 @@ namespace FinalProject
                 appointment.patient = getPatientByID(patientid);
                 appointment.doctor = getDoctorByID(DoctorID);
                 appointment.day = Convert.ToDateTime(day);
-                appointment.reason = ReasonID;
+                appointment.reason = getReason(ReasonID);
 
                 appoimnets.Add(appointment);
             }
@@ -195,7 +267,7 @@ namespace FinalProject
                 xmlOut.WriteElementString("patientid", appoimnet.patient.PatientId);
                 xmlOut.WriteElementString("DoctorID", appoimnet.doctor.ID);
                 xmlOut.WriteElementString("Day", appoimnet.day.ToShortDateString());
-                xmlOut.WriteElementString("ReasonID", appoimnet.reason);
+                xmlOut.WriteElementString("ReasonID", appoimnet.reason.reasonName);
 
                 xmlOut.WriteEndElement();
             }
@@ -207,84 +279,22 @@ namespace FinalProject
 
         public static void deleteAppoiment(BindingList<Appoiment> appoimnets, int index)
         {
-            /* XmlDocument xml11 = new XmlDocument();
-             xml11.Load("appoiments.xml");
-             XmlNodeList nodes = xml11.SelectNodes("//appoiments");
-             foreach(XmlElement element in nodes){
+            appoimnets.RemoveAt(index);
+            addScheduleOfAppToXML(new List<Appoiment> (appoimnets));
 
-                 element.RemoveAll();
 
-             }
-             xml11.Save("appoiments.xml");*/
-            //////////////////////////////////////////////////////////
-            /* XmlDocument doc = new XmlDocument();
-             doc.Load("appoiments.xml");
-
-             Appoiment toBeDeleted = appoimnets.ElementAt(index);
-
-             XmlNodeList nodes = doc.SelectNodes("//appoiments");
-             foreach (XmlElement element in nodes)
-             {
-
-                 string Id = element.ChildNodes[0].InnerText;
-                 if (Id == toBeDeleted.Id)
-                 {
-                     doc.DocumentElement.RemoveChild(element); // i don't know if that's the right function
-                     appoimnets.RemoveAt(index);
-                     break;
-                 }
-             }
-             doc.Save("appoiments.xml");
-
-         }*/
-            XmlDocument doc = new XmlDocument();
-            doc.Load("appoiments.xml");
-            System.Xml.XPath.XPathNavigator nav = doc.CreateNavigator();
-
-            XPathExpression exp = nav.Compile("Input//job");
-            XPathNodeIterator iter = nav.Select(exp);
-            int seletedIndex = 0;
-            while (iter.MoveNext())
-            {
-                if (iter.Current is IHasXmlNode)
-                {
-                    XmlNode node = ((IHasXmlNode)iter.Current).GetNode();
-                    if (3 == Convert.ToInt32((node["Id"]).InnerText))
-                    {
-                        break;
-                    }
-                    seletedIndex++;
-                }
-            }
-            XmlNode xmlnode = doc.DocumentElement.ChildNodes.Item(seletedIndex);
-            xmlnode.ParentNode.RemoveChild(xmlnode);
-            doc.Save("appoiments.xml");
+        }
+        public static void deleteReason(BindingList<Reason>reasons,int index)
+        {
+            reasons.RemoveAt(index);
+            addReason(new List<Reason>(reasons));
         }
 
         public static void deleteDoctor(BindingList<Doctor> doctors, int index)
         {
-            XmlDocument doc = new XmlDocument();
-            doc.Load("doctors.xml");
-            System.Xml.XPath.XPathNavigator nav = doc.CreateNavigator();
+            doctors.RemoveAt(index);
+            addDoctorXML(new List<Doctor>(doctors));
 
-            XPathExpression exp = nav.Compile("Input//job");
-            XPathNodeIterator iter = nav.Select(exp);
-            int seletedIndex = 0;
-            while (iter.MoveNext())
-            {
-                if (iter.Current is IHasXmlNode)
-                {
-                    XmlNode node = ((IHasXmlNode)iter.Current).GetNode();
-                    if (0 == Convert.ToInt32((node["Id"]).InnerText))
-                    {
-                        break;
-                    }
-                    seletedIndex++;
-                }
-            }
-            XmlNode xmlnode = doc.DocumentElement.ChildNodes.Item(seletedIndex);
-            xmlnode.ParentNode.RemoveChild(xmlnode);
-            doc.Save("doctors.xml");
         }
     }
 }

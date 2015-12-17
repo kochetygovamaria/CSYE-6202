@@ -27,8 +27,6 @@ C:\Users\Maria Kochetygova\Source\Repos\CSYE-62024\FinalProject\obj\Debug\FinalP
 C:\Users\Maria Kochetygova\Source\Repos\CSYE-62024\FinalProject\obj\Debug\FinalProject.AddDoctor.resources
 C:\Users\Maria Kochetygova\Source\Repos\CSYE-62024\FinalProject\obj\Debug\FinalProject.CancelForm.resources
 C:\Users\Maria Kochetygova\Source\Repos\CSYE-62024\FinalProject\obj\Debug\FinalProject.DeleteDoctor.resources
-C:\Users\Maria Kochetygova\Source\Repos\CSYE-62024\FinalProject\obj\Debug\FinalProject.Form1.resources
-C:\Users\Maria Kochetygova\Source\Repos\CSYE-62024\FinalProject\obj\Debug\FinalProject.Form2.resources
 C:\Users\Maria Kochetygova\Source\Repos\CSYE-62024\FinalProject\obj\Debug\FinalProject.DoctorList.resources
 C:\Users\Maria Kochetygova\Source\Repos\CSYE-62024\FinalProject\obj\Debug\FinalProject.HospitalAdmin.resources
 C:\Users\Maria Kochetygova\Source\Repos\CSYE-62024\FinalProject\obj\Debug\FinalProject.ListofApp.resources
@@ -40,3 +38,9 @@ C:\Users\Maria Kochetygova\Source\Repos\CSYE-62024\FinalProject\obj\Debug\FinalP
 C:\Users\Maria Kochetygova\Source\Repos\CSYE-62024\FinalProject\obj\Debug\FinalProject.csproj.GenerateResource.Cache
 C:\Users\Maria Kochetygova\Source\Repos\CSYE-62024\FinalProject\obj\Debug\FinalProject.exe
 C:\Users\Maria Kochetygova\Source\Repos\CSYE-62024\FinalProject\obj\Debug\FinalProject.pdb
+C:\Users\Maria Kochetygova\Source\Repos\CSYE-62024\FinalProject\obj\Debug\FinalProject.csprojResolveAssemblyReference.cache
+C:\Users\Maria Kochetygova\Source\Repos\CSYE-62024\FinalProject\obj\Debug\FinalProject.ListOfReasons.resources
+C:\Users\Maria Kochetygova\Source\Repos\CSYE-62024\FinalProject\obj\Debug\FinalProject.AddReason.resources
+C:\Users\Maria Kochetygova\Source\Repos\CSYE-62024\FinalProject\obj\Debug\FinalProject.UpdateReason.resources
+C:\Users\Maria Kochetygova\Source\Repos\CSYE-62024\FinalProject\obj\Debug\FinalProject.LoginForm.resources
+C:\Users\Maria Kochetygova\Source\Repos\CSYE-62024\FinalProject\obj\Debug\FinalProject.MainForm.resources

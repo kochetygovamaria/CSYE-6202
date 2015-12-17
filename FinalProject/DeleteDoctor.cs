@@ -15,7 +15,7 @@ namespace FinalProject
         internal DoctorList DoctorList;
         private BindingList<Doctor> doctors;
         int index = 0;
-        public DeleteDoctor(Doctor doctor, int index)
+        public DeleteDoctor( int index)
         {
             InitializeComponent();
             this.index = index;

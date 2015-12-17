@@ -17,6 +17,7 @@ namespace FinalProject
         private BindingList<Appoiment> appoimnets;
         private BindingList<Doctor> doctors;
         private BindingList<Patient> patients;
+        private BindingList<Reason> reasons;
         int index = 0;
         public UpdateApp(Appoiment appoiment, int index)
         {
@@ -29,12 +30,14 @@ namespace FinalProject
             patients = ClassHelper.LoadPatients("patients.xml");
             doctors = ClassHelper.LoadDoctors();
             appoimnets = ClassHelper.LoadAppoimnet();
+            reasons = ClassHelper.LoadReason();
             AppID.Text = appoimnets[index].Id;
             PatientCBX.Text = appoimnets[index].patient.ToString();
             DoctorCBX.Text = appoimnets[index].doctor.ToString();
             dateTimePicker1.Text = appoimnets[index].day.ToShortDateString();
-            ReasonCBX.Text = appoimnets[index].reason;
+            ReasonCBX.Text = appoimnets[index].reason.ToString();
             DoctorCBX.DataSource = doctors;
+            ReasonCBX.DataSource = reasons;
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -45,7 +48,8 @@ namespace FinalProject
         private void buttonUpdate_Click(object sender, EventArgs e) {
             DateTime time;
             time = dateTimePicker1.Value;
-            if (DoctorCBX.Text != this.appoimnets[index].doctor.ToString() || time != this.appoimnets[index].day || ReasonCBX.Text != this.appoimnets[index].reason)
+            if (DoctorCBX.Text != this.appoimnets[index].doctor.ToString() || time != this.appoimnets[index].day ||
+                ReasonCBX.Text != this.appoimnets[index].reason.ToString())
             {
                 DialogResult dialogresult = MessageBox.Show("Do you won to update  an appoimnet?", "Update an appoiment", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dialogresult == DialogResult.Yes)
@@ -54,7 +58,7 @@ namespace FinalProject
                     //appoimnets[index].patient.ToString().Equals(PatientCBX);
                    // appoimnets[index].doctor.ToString().Equals( DoctorCBX.Text);
                     appoimnets[index].day = time;
-                    appoimnets[index].reason = ReasonCBX.Text;
+                    appoimnets[index].reason.reasonName = ReasonCBX.Text;
 
                     updateAppoimnet();
 

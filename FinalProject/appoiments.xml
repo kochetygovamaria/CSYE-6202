@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<appoiments>
+  <appoiment>
+    <Id>343</Id>
+    <patientid>1</patientid>
+    <DoctorID>AM443</DoctorID>
+    <ReasonID>New Appointment</ReasonID>
+    </appoiment>
+    </appoiments>

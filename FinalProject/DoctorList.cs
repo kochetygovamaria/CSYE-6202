@@ -74,7 +74,7 @@ namespace FinalProject
             }
 
 
-            DeleteDoctor dD = new DeleteDoctor(doctor, index);
+            DeleteDoctor dD = new DeleteDoctor(index);
             dD.DoctorList = this;
             dD.ShowDialog();
             LoadDataGrid();

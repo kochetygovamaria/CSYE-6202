@@ -16,6 +16,7 @@ namespace FinalProject
         public BindingList <Appoiment> appoimnets;
         public BindingList<Patient> patients;
         public  BindingList<Doctor> doctors;
+        public BindingList<Reason> reasons;
 
 
         public ListofApp()
@@ -24,6 +25,7 @@ namespace FinalProject
             this.appoimnets = new BindingList<Appoiment>();
             this.patients = new BindingList<Patient>();
             this.doctors = new BindingList<Doctor>();
+            this.reasons = new BindingList<Reason>();
         }
 
       
@@ -36,6 +38,7 @@ namespace FinalProject
         {
            patients= ClassHelper.LoadPatients("patients.xml"); 
            doctors=ClassHelper.LoadDoctors();
+            reasons = ClassHelper.LoadReason();
             LoadDataGrid();
 
         }
@@ -68,7 +71,7 @@ namespace FinalProject
         private void Back_Click(object sender, EventArgs e)
         {
             this.Close();
-            Form2 form = new Form2();
+            MainForm form = new MainForm();
             form.Show();
         }
 
@@ -136,6 +139,21 @@ namespace FinalProject
         {
             appoimnets = ClassHelper.LoadAppoimnet();
             AppoimentGridView.DataSource = appoimnets;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ReasonCBX_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
     }

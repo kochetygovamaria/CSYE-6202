@@ -34,5 +34,24 @@ namespace FinalProject
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ListOfReasons lOR = new ListOfReasons();
+            lOR.ShowDialog();
+        }
+        
+        private void HospitalAdmin_FormClosing(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void logOutBtn_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm stUF = new LoginForm();
+            stUF.Show();
+
+        }
     }
 }

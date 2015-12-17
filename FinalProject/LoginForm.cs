@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FinalProject
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
         }
@@ -47,7 +47,7 @@ namespace FinalProject
                     if (ad.UserName == user && ad.Password == password)
 
                     {
-                        Form2 fmst = new Form2(persons, appoimnet, doctor);
+                        MainForm fmst = new MainForm(persons, appoimnet, doctor);
 
 
                         if (ad.AccessPoint == "admin")

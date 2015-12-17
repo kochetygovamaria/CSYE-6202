@@ -44,16 +44,17 @@ namespace FinalProject
             this.button1 = new System.Windows.Forms.Button();
             this.AppID = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.AppoimentGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // AppoimentGridView
             // 
             this.AppoimentGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AppoimentGridView.Location = new System.Drawing.Point(122, 449);
+            this.AppoimentGridView.Location = new System.Drawing.Point(122, 445);
             this.AppoimentGridView.Name = "AppoimentGridView";
             this.AppoimentGridView.RowTemplate.Height = 33;
-            this.AppoimentGridView.Size = new System.Drawing.Size(976, 512);
+            this.AppoimentGridView.Size = new System.Drawing.Size(1240, 512);
             this.AppoimentGridView.TabIndex = 0;
             this.AppoimentGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.AppoimentGridView.SelectionChanged += new System.EventHandler(this.AppoimentGridView_SelectionChanged);
@@ -94,6 +95,7 @@ namespace FinalProject
             this.ReasonCBX.Name = "ReasonCBX";
             this.ReasonCBX.Size = new System.Drawing.Size(218, 33);
             this.ReasonCBX.TabIndex = 26;
+            this.ReasonCBX.SelectedIndexChanged += new System.EventHandler(this.ReasonCBX_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -130,6 +132,7 @@ namespace FinalProject
             this.label1.Size = new System.Drawing.Size(79, 25);
             this.label1.TabIndex = 22;
             this.label1.Text = "Patient";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // PatientCBX
             // 
@@ -166,11 +169,22 @@ namespace FinalProject
             this.AppID.Size = new System.Drawing.Size(218, 31);
             this.AppID.TabIndex = 29;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(113, 105);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(32, 25);
+            this.label5.TabIndex = 30;
+            this.label5.Text = "ID";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
             // ListofApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1228, 1045);
+            this.ClientSize = new System.Drawing.Size(1580, 1045);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.AppID);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker);
@@ -209,5 +223,6 @@ namespace FinalProject
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox AppID;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Label label5;
     }
 }

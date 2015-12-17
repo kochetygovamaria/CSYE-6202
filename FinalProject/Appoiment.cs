@@ -12,9 +12,9 @@ namespace FinalProject
         public DateTime day { get; set; }
         public Patient patient { get; set; }
         public Doctor doctor { get; set; }
-        public String reason { get; set; }
+        public Reason reason { get; set; }
         public String Id { get; set; }
-        public void addAppointment(string Id,DateTime day, string reason, Patient patient, Doctor doctor)
+        public void addAppointment(string Id,DateTime day, Reason reason, Patient patient, Doctor doctor)
         {
 
             this.day = day;
@@ -26,7 +26,7 @@ namespace FinalProject
         }
         public override string ToString()
         {
-            return String.Format("{0} - {1} - {2}", day.ToShortDateString(), patient.ToString(), doctor.ToString());
+            return String.Format("{0} - {1} - {2}", day.ToShortDateString(),reason.ToString(), patient.ToString(), doctor.ToString());
         }
 
 

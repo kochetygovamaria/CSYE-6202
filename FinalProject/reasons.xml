@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<reasons>
+  <reason>
+    <reasonName>New Appointment</reasonName>
+    <reasonPrice>100</reasonPrice>
+      </reason>
+  <reason>
+    <reasonName>Follow up</reasonName>
+    <reasonPrice>60</reasonPrice>
+  </reason>
+        </reasons>

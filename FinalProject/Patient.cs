@@ -28,6 +28,16 @@ namespace FinalProject
             DateOfBirth = dateOfBirth;
         }
 
+        public  static int Age(DateTime DateOfBirth)
+        {
+           int age = DateTime.Now.Year-DateOfBirth.Year;
+            if ((DateOfBirth.Month > DateTime.Now.Month) || (DateOfBirth.Month == DateTime.Now.Month && DateOfBirth.Day > DateTime.Now.Day))
+                age--;
+
+            return age;
+
+        }
+
         public override string ToString()
         {
             return String.Format("{0}, {1}", LastName, FirstName);

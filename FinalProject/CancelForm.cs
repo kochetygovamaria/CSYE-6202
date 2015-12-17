@@ -17,6 +17,7 @@ namespace FinalProject
 
         private BindingList<Doctor> doctors;
         private BindingList<Patient> patients;
+        private BindingList<Reason> reasons;
         int index = 0;
         public CancelForm(Appoiment appoiment, int index)
         {
@@ -30,11 +31,12 @@ namespace FinalProject
             patients = ClassHelper.LoadPatients("patients.xml");
             doctors = ClassHelper.LoadDoctors();
             appoimnets = ClassHelper.LoadAppoimnet();
+            reasons = ClassHelper.LoadReason();
             AppID.Text = appoimnets[index].Id;
             PatientCBX.Text = appoimnets[index].patient.PatientId;
             DoctorCBX.Text = appoimnets[index].doctor.ID;
             dateTimePicker.Text = appoimnets[index].day.ToShortDateString();
-            ReasonCBX.Text = appoimnets[index].reason;
+            ReasonCBX.Text = appoimnets[index].reason.reasonName;
         }
         private void DeleteButton_Click(object sender, EventArgs e)
         {

@@ -42,6 +42,7 @@ namespace FinalProject
             this.ReasonCBX = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.AppID = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // DoctorCBX
@@ -121,9 +122,6 @@ namespace FinalProject
             // ReasonCBX
             // 
             this.ReasonCBX.FormattingEnabled = true;
-            this.ReasonCBX.Items.AddRange(new object[] {
-            "New Appoimnet",
-            "Follow-up"});
             this.ReasonCBX.Location = new System.Drawing.Point(316, 295);
             this.ReasonCBX.Name = "ReasonCBX";
             this.ReasonCBX.Size = new System.Drawing.Size(218, 33);
@@ -143,11 +141,21 @@ namespace FinalProject
             this.AppID.Size = new System.Drawing.Size(218, 31);
             this.AppID.TabIndex = 20;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(71, 50);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(32, 25);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "ID";
+            // 
             // ScheduleApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(924, 647);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.AppID);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.ReasonCBX);
@@ -180,5 +188,6 @@ namespace FinalProject
         private System.Windows.Forms.ComboBox ReasonCBX;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox AppID;
+        private System.Windows.Forms.Label label5;
     }
 }

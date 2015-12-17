@@ -49,7 +49,7 @@ namespace FinalProject
 
         private void backButton_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            MainForm form2 = new MainForm();
             form2.ListOfPatients = this;
             this.Close();
             form2.ShowDialog();
