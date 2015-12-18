@@ -29,7 +29,7 @@ namespace FinalProject
         {
 
             patients = ClassHelper.LoadPatients("patients.xml");
-            doctors = ClassHelper.LoadDoctors();
+            doctors = ClassHelper.LoadDoctors("doctors.xml");
             appoimnets = ClassHelper.LoadAppoimnet();
             reasons = ClassHelper.LoadReason();
             AppID.Text = appoimnets[index].Id;
@@ -40,7 +40,7 @@ namespace FinalProject
         }
         private void DeleteButton_Click(object sender, EventArgs e)
         {
-            DialogResult dialogresult = MessageBox.Show("Do you wan tot delete a person?", "Remove appoimnet from the system", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult dialogresult = MessageBox.Show("Do you wan to delete a appointment?", "Remove appointment from the system", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dialogresult == DialogResult.Yes)
             {
                 ClassHelper.deleteAppoiment(appoimnets, index);

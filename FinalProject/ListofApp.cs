@@ -37,7 +37,7 @@ namespace FinalProject
         private void List_of_App_Load(object sender, EventArgs e)
         {
            patients= ClassHelper.LoadPatients("patients.xml"); 
-           doctors=ClassHelper.LoadDoctors();
+           doctors=ClassHelper.LoadDoctors("doctors.xml");
             reasons = ClassHelper.LoadReason();
             LoadDataGrid();
 

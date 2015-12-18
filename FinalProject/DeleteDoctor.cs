@@ -23,7 +23,7 @@ namespace FinalProject
 
         private void DeleteDoctor_Load(object sender, EventArgs e)
         {
-            doctors = ClassHelper.LoadDoctors();
+            doctors = ClassHelper.LoadDoctors("doctors.xml");
             textID.Text = doctors[index].ID;
             textNameF.Text = doctors[index].FirstName;
             textLastName.Text = doctors[index].LastName;

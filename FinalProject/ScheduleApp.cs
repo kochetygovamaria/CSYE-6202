@@ -35,7 +35,7 @@ namespace FinalProject
         {
 
             patients = ClassHelper.LoadPatients("patients.xml");
-            doctors = ClassHelper.LoadDoctors();
+            doctors = ClassHelper.LoadDoctors("doctors.xml");
             appoimnets = ClassHelper.LoadAppoimnet();
             reasons = ClassHelper.LoadReason();
             PatientCBX.DataSource = patients;

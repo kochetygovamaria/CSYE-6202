@@ -44,10 +44,10 @@ namespace FinalProject
         {
             foreach (DataGridViewRow row in dataGridViewDoctor.SelectedRows)
             {
-                textID.Text = row.Cells[2].Value.ToString();
-                textNameF.Text = row.Cells[0].Value.ToString();
-                textLastName.Text = row.Cells[1].Value.ToString();
-                textTitle.Text = row.Cells[3].Value.ToString();
+                textID.Text = row.Cells[0].Value.ToString();
+                textNameF.Text = row.Cells[2].Value.ToString();
+                textLastName.Text = row.Cells[3].Value.ToString();
+                textTitle.Text = row.Cells[1].Value.ToString();
 
 
             }
@@ -57,7 +57,7 @@ namespace FinalProject
         {
             int index = 0;
             Doctor doctor = null;
-            doctors = ClassHelper.LoadDoctors();
+            doctors = ClassHelper.LoadDoctors("doctors.xml");
             foreach (DataGridViewRow row in dataGridViewDoctor.SelectedRows)
             {
                 foreach (Doctor doc in doctors)
@@ -82,7 +82,7 @@ namespace FinalProject
         }
         private void LoadDataGrid()
         {
-            doctors = ClassHelper.LoadDoctors();
+            doctors = ClassHelper.LoadDoctors("doctors.xml");
             dataGridViewDoctor.DataSource = doctors;
         }
 
@@ -90,7 +90,7 @@ namespace FinalProject
         {
             int index = 0;
             Doctor doctor = null;
-            doctors = ClassHelper.LoadDoctors();
+            doctors = ClassHelper.LoadDoctors("doctors.xml");
             foreach (DataGridViewRow row in dataGridViewDoctor.SelectedRows)
             {
                 foreach (Doctor doc in doctors)

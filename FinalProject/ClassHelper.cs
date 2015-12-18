@@ -129,7 +129,7 @@ namespace FinalProject
         }
 
 
-        public static BindingList<Doctor> LoadDoctors()
+        public static BindingList<Doctor> LoadDoctors(string path)
         {
             BindingList<Doctor> doctors = new BindingList<Doctor>();
             XmlDocument doc = new XmlDocument();
@@ -169,7 +169,7 @@ namespace FinalProject
 
         public static Doctor getDoctorByID(string id)
         {
-            BindingList<Doctor> doctors = LoadDoctors();
+            BindingList<Doctor> doctors = LoadDoctors("doctors.xml");
             Doctor doctor = null;
             foreach (Doctor d in doctors)
             {
@@ -295,6 +295,14 @@ namespace FinalProject
             doctors.RemoveAt(index);
             addDoctorXML(new List<Doctor>(doctors));
 
+        }
+        public static bool UserEnteredSentinelValue(string userInput)
+        {
+            var result = false;
+            if (userInput.Equals(null)) { result = true; }
+
+
+            return result;
         }
     }
 }

@@ -28,7 +28,7 @@ namespace FinalProject
         private void UpdateApp_Load(object sender, EventArgs e)
         {
             patients = ClassHelper.LoadPatients("patients.xml");
-            doctors = ClassHelper.LoadDoctors();
+            doctors = ClassHelper.LoadDoctors("doctors.xml");
             appoimnets = ClassHelper.LoadAppoimnet();
             reasons = ClassHelper.LoadReason();
             AppID.Text = appoimnets[index].Id;
