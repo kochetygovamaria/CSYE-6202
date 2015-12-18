@@ -1,0 +1,45 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace WpfApplication1
+{
+    class Student: Person
+    {
+        public String StudentId
+        {
+            get; set;
+        }
+        public String Department
+        {
+            get; set;
+        }
+        public String Enrolltype
+        {
+            get; set;
+        }
+        public Student() { }
+
+        public Student(string firstnmae, string lastname, string studentid, string department, string enroll)
+        {
+            FirstName = firstnmae;
+            LastName = lastname;
+            StudentId = studentid;
+            Department = department;
+            Enrolltype = enroll;
+        }
+
+        public void addStudent(string firstnmae, string lastname, string studentid, string department, string enroll)
+        {
+            FirstName = firstnmae;
+            LastName = lastname;
+            StudentId = studentid;
+            Department = department;
+            Enrolltype = enroll;
+        }
+       
+    }
+}
+
